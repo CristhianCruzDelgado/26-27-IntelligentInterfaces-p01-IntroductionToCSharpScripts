@@ -13,7 +13,7 @@ public class Script2 : MonoBehaviour
 
     void Start()
     {
-        CalculateAndShowProperties();
+        
     }
 
     void Update()
