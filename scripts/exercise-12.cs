@@ -3,11 +3,10 @@ using UnityEngine;
 public class Script_12 : MonoBehaviour
 {
     public Transform sphereTransform;
-    public float speed = 3.0f;
+    public float speed = 3f;
 
     void Start()
     {
-
     }
 
     void Update()
@@ -21,6 +20,7 @@ public class Script_12 : MonoBehaviour
         {
             return;
         }
+
         transform.LookAt(sphereTransform);
         Vector3 displacement = Vector3.forward * speed * Time.deltaTime;
         transform.Translate(displacement, Space.Self);

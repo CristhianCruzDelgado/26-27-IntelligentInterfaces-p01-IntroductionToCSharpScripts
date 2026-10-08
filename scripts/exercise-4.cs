@@ -1,19 +1,17 @@
 using UnityEngine;
 
-public class Script4 : MonoBehaviour
+public class Script_4 : MonoBehaviour
 {
-    [SerializeField] private float distanceToCube;
-    [SerializeField] private float distanceToCylinder;
+    public float distanceToCube;
+    public float distanceToCylinder;
 
-    private string cubeTag = "Cube";
-    private string cylinderTag = "Cylinder";
     private GameObject cubeObject;
     private GameObject cylinderObject;
 
     void Start()
     {
-        cubeObject = GameObject.FindWithTag(cubeTag);
-        cylinderObject = GameObject.FindWithTag(cylinderTag);
+        cubeObject = GameObject.FindWithTag("cube");
+        cylinderObject = GameObject.FindWithTag("cylinder");
 
         if (cubeObject == null)
         {
@@ -30,13 +28,13 @@ public class Script4 : MonoBehaviour
         if (cubeObject != null)
         {
             distanceToCube = Vector3.Distance(transform.position,
-                                cubeObject.transform.position);
+                                              cubeObject.transform.position);
             Debug.Log("Distance to Cube: " + distanceToCube);
         }
         if (cylinderObject != null)
         {
             distanceToCylinder = Vector3.Distance(transform.position,
-                                cylinderObject.transform.position);
+                                            cylinderObject.transform.position);
             Debug.Log("Distance to Cylinder: " + distanceToCylinder);
         }
     }

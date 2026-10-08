@@ -1,12 +1,11 @@
 using UnityEngine;
 
-public class Script_10_1 : MonoBehaviour
+public class Script_9_1 : MonoBehaviour
 {
-    public float speed = 5.0f;
+    public float speed = 2f;
 
     void Start()
     {
-
     }
 
     void Update()
@@ -18,8 +17,8 @@ public class Script_10_1 : MonoBehaviour
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
-        float deltaX = horizontalInput * speed * Time.deltaTime;
-        float deltaZ = verticalInput * speed * Time.deltaTime;
+        float deltaX = horizontalInput * speed;
+        float deltaZ = verticalInput * speed;
         transform.Translate(deltaX, 0.0f, deltaZ);
     }
 }

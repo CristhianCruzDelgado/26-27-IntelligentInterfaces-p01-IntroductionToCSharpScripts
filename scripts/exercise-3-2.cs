@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class Script3 : MonoBehaviour
+public class Script_3_2 : MonoBehaviour
 {
-    [SerializeField] private Vector3 spherePosition;
+    public Vector3 spherePosition;
 
     void Start()
     {
-        ShowPositionDirectProperty();
+        ShowPositionGetComponent();
     }
 
     void Update()
@@ -14,15 +14,10 @@ public class Script3 : MonoBehaviour
         ShowPositionGetComponent();
     }
 
-    private void ShowPositionDirectProperty()
-    {
-        spherePosition = transform.position;
-        Debug.Log("Direct position: " + spherePosition);
-    }
-
     private void ShowPositionGetComponent()
     {
         Transform transformComponent = GetComponent<Transform>();
+        
         if (transformComponent != null)
         {
             spherePosition = transformComponent.position;

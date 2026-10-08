@@ -4,7 +4,6 @@ public class Script_7 : MonoBehaviour
 {
     void Start()
     {
-        
     }
 
     void Update()
@@ -14,18 +13,9 @@ public class Script_7 : MonoBehaviour
 
     private void CheckFireInput()
     {
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            Debug.Log("Tecla 'H' física detectada por KeyCode.");
-        }
         if (Input.GetButtonDown("Fire1"))
         {
-            Shoot();
+            Debug.Log("¡PUM! ... fire button: (Fire1)");
         }
-    }
-
-    private void Shoot()
-    {
-        Debug.Log("¡PUM! ... fire button: (Fire1)");
     }
 }

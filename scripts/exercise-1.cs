@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class Script1 : MonoBehaviour
+public class Script_1 : MonoBehaviour
 {
-    [SerializeField] private int framesToWait = 240;
-
+    public int framesToWait = 240;
+    
     private Color currentColor;
     private Renderer objectRenderer;
 
@@ -38,6 +38,7 @@ public class Script1 : MonoBehaviour
     {
         int indexToChange = UnityEngine.Random.Range(0, 3);
         float newValue = UnityEngine.Random.Range(0f, 1f);
+
         switch (indexToChange)
         {
             case 0:

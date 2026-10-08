@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class Script5 : MonoBehaviour
+public class Script_5 : MonoBehaviour
 {
-    public Vector3 desplazamiento;
+    public Vector3 displacement;
 
     private Vector3 originalPosition;
 
@@ -13,16 +13,22 @@ public class Script5 : MonoBehaviour
 
     void Update()
     {
+        CheckSpacebarKey();
+    }
+
+    private void CheckSpacebarKey()
+    {
         float jumpInput = Input.GetAxis("Jump");
+
         if (jumpInput > 0f)
         {
             RelocateObject();
-        }
+        }        
     }
 
     private void RelocateObject()
     {
-        transform.position = originalPosition + desplazamiento;
+        transform.position = originalPosition + displacement;
         Debug.Log(gameObject.name + " move to: " + transform.position);
     }
 }

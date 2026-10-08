@@ -2,11 +2,10 @@ using UnityEngine;
 
 public class Script_6 : MonoBehaviour
 {
-    public float speed = 5.0f;
+    public float speed = 5f;
 
     void Start()
     {
-
     }
 
     void Update()
@@ -18,6 +17,7 @@ public class Script_6 : MonoBehaviour
     {
         float horizontalValue = Input.GetAxis("Horizontal");
         float verticalValue = Input.GetAxis("Vertical");
+
         if (Input.GetKey(KeyCode.UpArrow))
         {
             float result = speed * verticalValue;
